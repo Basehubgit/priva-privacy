@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="tr">
   <head>
     <meta charset="UTF-8">
@@ -18,43 +18,76 @@
   <body>
 
   <h1>PRIVA Gizlilik Politikası</h1>
-  <p class="date">Son güncelleme: 13 Mayıs 2026</p>
+  <p class="date">Son güncelleme: 30 Mayıs 2026</p>
 
-  <p>PRIVA ("uygulama"), gizliliğinizi ön planda tutan, tamamen çevrimdışı çalışan bir belge yönetim uygulamasıdır. Bu
-  politika, uygulamamızın hangi verileri topladığını ve nasıl kullandığını açıklar.</p>
+  <p>PRIVA ("uygulama"), gizliliği ön planda tutan bir belge yönetim uygulamasıdır. Tüm PDF/görsel işlemleri yalnızca
+  cihazınızda çalışır; belge dosyalarınız sunucularımıza gönderilmez. Bu politika, uygulamamızın hangi verileri
+  topladığını ve nasıl kullandığını açıklar.</p>
 
-  <h2>1. Toplanan Veriler</h2>
-  <p>PRIVA, kişisel verilerinizi sunucularımıza göndermez. Tüm belgeler ve işlemler yalnızca cihazınızda yerel olarak
-  gerçekleşir.</p>
+  <h2>1. Belgeleriniz — Cihazda Kalır</h2>
+  <p>Tüm PDF, görsel ve OCR işlemleri (birleştirme, bölme, sıkıştırma, tarama, metin çıkarma, şifreleme, imzalama vb.)
+  cihazınızda yerel olarak gerçekleşir.</p>
   <ul>
-    <li><strong>Belgeler:</strong> Yüklediğiniz veya oluşturduğunuz PDF ve görseller yalnızca cihazınızda saklanır.</li>
+    <li><strong>Belgeler:</strong> Yüklediğiniz veya oluşturduğunuz PDF/görseller yalnızca cihazınızda saklanır, hiçbir
+  sunucuya yüklenmez.</li>
     <li><strong>Biyometrik veri:</strong> Parmak izi / yüz tanıma yalnızca cihaz işletim sistemi tarafından işlenir;
   uygulamamız bu verilere erişmez veya saklamaz.</li>
-    <li><strong>Tercihler:</strong> Tema, dil ve uygulama ayarları yalnızca yerel depolamada tutulur.</li>
+    <li><strong>Yerel tercihler:</strong> Tema, dil ve uygulama ayarları yalnızca cihazınızdaki yerel depolamada
+  tutulur.</li>
   </ul>
 
-  <h2>2. Reklamlar</h2>
-  <p>Uygulama, Google AdMob aracılığıyla reklam gösterebilir. Google, reklam kişiselleştirmek amacıyla reklam
-  tanımlayıcısı (IDFA/GAID) gibi verileri toplayabilir. Bu veri toplama Google'ın gizlilik politikasına tabidir: <a
-  href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
-  <p>Premium abonelik satın alan kullanıcılara reklam gösterilmez.</p>
+  <h2>2. Hesap (Google ile Giriş)</h2>
+  <p>PRIVA, krediler ve günlük haklarınızın cihazlar arası taşınabilmesi için <strong>zorunlu Google ile Giriş</strong>
+  kullanır. Bu giriş Firebase Authentication üzerinden gerçekleşir.</p>
+  <ul>
+    <li><strong>Toplanan veriler:</strong> E-posta adresiniz, Google adınız ve profil resmi URL'iniz hesap eşleştirme
+  amacıyla saklanır.</li>
+    <li><strong>Kullanım amacı:</strong> Yalnızca hesabınıza bağlı kredi bakiyesini ve günlük ücretsiz hakkınızı doğru
+  cihaza ulaştırmak içindir; pazarlama amacıyla kullanılmaz.</li>
+    <li><strong>Saklama:</strong> Hesap bilgileri Google Firebase altyapısı (Authentication + Cloud Firestore) üzerinde
+  saklanır. Firebase Google'ın güvenlik standartlarına tabidir: <a href="https://firebase.google.com/support/privacy"
+  target="_blank">firebase.google.com/support/privacy</a></li>
+    <li><strong>Silme hakkı:</strong> Hesabınızı silmek isterseniz aşağıdaki iletişim adresinden talepte
+  bulunabilirsiniz; tüm hesap bağlı verileriniz silinir.</li>
+  </ul>
 
-  <h2>3. Uygulama İçi Satın Alma</h2>
-  <p>Satın alma işlemleri Google Play Store / Apple App Store altyapısı üzerinden gerçekleştirilir. Ödeme bilgileriniz
-  bu platformlar tarafından işlenir; PRIVA ödeme veya kart bilgilerinize erişmez.</p>
+  <h2>3. Krediler ve Bulut Senkronizasyonu</h2>
+  <p>PRIVA kredi sistemi ile çalışır: her PDF işlemi 1 kredi harcar, her gün 1 ücretsiz kredi otomatik yenilenir. Kredi
+  bakiyeniz Firebase Cloud Firestore üzerinde Google hesabınızla ilişkilendirilmiş şekilde saklanır.</p>
+  <ul>
+    <li>Sadece kredi bakiyesi, günlük kalan hak ve son yenilenme tarihi gibi <strong>sayısal değerler</strong> bulutta
+  tutulur. Belge içerikleri asla yüklenmez.</li>
+    <li>Aynı hesapla farklı cihazlardan giriş yaptığınızda krediler senkronize olur.</li>
+  </ul>
 
-  <h2>4. Kamera ve Dosya Erişimi</h2>
+  <h2>4. Reklamlar (Opsiyonel, Ödüllü)</h2>
+  <p>PRIVA, Google AdMob aracılığıyla yalnızca <strong>ödüllü (rewarded) reklam</strong> gösterir. Reklamlar uygulamada
+  zorunlu değildir; sadece "Reklam izle (+1 kredi)" butonuna bastığınızda gösterilir ve karşılığında 1 kredi
+  kazanırsınız.</p>
+  <p>Google reklam kişiselleştirmek amacıyla reklam tanımlayıcısı (IDFA/GAID) gibi verileri toplayabilir. Bu veri
+  toplama Google'ın gizlilik politikasına tabidir: <a href="https://policies.google.com/privacy"
+  target="_blank">policies.google.com/privacy</a></p>
+
+  <h2>5. Uygulama İçi Satın Alma (Kredi Paketleri)</h2>
+  <p>İsterseniz tek seferlik kredi paketleri (25, 50, 100, 250, 500 kredi) satın alabilirsiniz. Tüm satın alma işlemleri
+   Google Play Store altyapısı üzerinden gerçekleştirilir. Ödeme bilgileriniz Play Store tarafından işlenir; PRIVA ödeme
+   veya kart bilgilerinize erişmez.</p>
+  <p>Satın alınan krediler hesabınıza bağlanır ve süresi dolmaz.</p>
+
+  <h2>6. Kamera ve Dosya Erişimi</h2>
   <p>Belge tarama özelliği için kamera iznine, belge yükleme için ise depolama iznine ihtiyaç duyulur. Bu veriler
-  yalnızca istediğiniz işlemi gerçekleştirmek için kullanılır ve üçüncü taraflarla paylaşılmaz.</p>
+  yalnızca istediğiniz işlemi gerçekleştirmek için kullanılır, hiçbir sunucuya yüklenmez ve üçüncü taraflarla
+  paylaşılmaz.</p>
 
-  <h2>5. Çocukların Gizliliği</h2>
+  <h2>7. Çocukların Gizliliği</h2>
   <p>Uygulama 18 yaş altı kullanıcılara yönelik değildir ve bilerek çocuklara ait kişisel veri toplamayız.</p>
 
-  <h2>6. Değişiklikler</h2>
+  <h2>8. Değişiklikler</h2>
   <p>Bu politika zaman zaman güncellenebilir. Önemli değişiklikler uygulama içinde bildirilir.</p>
 
-  <h2>7. İletişim</h2>
-  <p>Gizlilik politikamıza ilişkin sorularınız için: <a href="mailto:sepbat8@gmail.com ">sepbat8@gmail.com </a></p>
+  <h2>9. İletişim ve Veri Silme Talepleri</h2>
+  <p>Gizlilik politikamıza ilişkin sorularınız veya hesap/veri silme talepleriniz için: <a
+  href="mailto:sepbat8@gmail.com">sepbat8@gmail.com</a></p>
 
   </body>
   </html>
